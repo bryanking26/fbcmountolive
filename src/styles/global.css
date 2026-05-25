@@ -17,6 +17,15 @@
   --color-green-100: #d8f2d5;
   --color-green-50:  #f0faf0;
 
+  /* Gold accent — traditional/historic warmth */
+  --color-gold-700: #8a6a10;
+  --color-gold-600: #a88218;   /* eyebrow on light backgrounds */
+  --color-gold-500: #c5a028;   /* dividers, ornaments */
+  --color-gold-400: #d4b46a;   /* eyebrow on dark backgrounds */
+  --color-gold-300: #e2c987;
+  --color-gold-200: #ebdba8;
+  --color-gold-100: #f5ecd0;
+
   --color-cream: #f8f5f0;
   --color-parchment: #f0ebe2;
 

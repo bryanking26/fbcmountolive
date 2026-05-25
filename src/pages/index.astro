@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 // TODO: Update these placeholders before launch
-const YOUTUBE_URL  = "https://www.youtube.com/@fbcmountolive";
+const YOUTUBE_URL  = "https://www.youtube.com/@firstbaptistmountolive9502";
 const GIVING_URL   = "https://give.example.com";
 const MAPS_URL     = "https://maps.google.com/?q=First+Baptist+Church+Mount+Olive+NC";
 const PHONE        = "tel:+19195550000";
@@ -17,13 +17,7 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
   <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#hero" class="flex items-center gap-3">
-        <!--
-          Drop your logo file at public/logo.png (or .svg) and uncomment:
-          <img src="/logo.png" alt="First Baptist Mount Olive" class="h-10 w-auto" />
-        -->
-        <div class="h-10 px-3 rounded bg-white/15 border border-white/30 flex items-center justify-center text-white font-display font-bold text-sm tracking-wider">
-          FIRST BAPTIST · MOUNT OLIVE
-        </div>
+        <img src="/logo.png" alt="First Baptist Mount Olive" class="h-10 w-auto" />
       </a>
       <ul class="flex items-center gap-6 text-sm font-medium text-white/90">
         <li><a href="#welcome"      class="hover:text-white transition-colors hidden md:block">About</a></li>
@@ -43,33 +37,14 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
     id="hero"
     class="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
   >
-    <!--
-      Hero background: uncomment the <img> tag below and add your sanctuary photo
-      to public/images/sanctuary.jpg for a dramatic full-bleed background.
-      <img src="/images/sanctuary.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-green-950/70"></div>
-    -->
-
-    <!-- CSS gradient background (active until a real photo is added) -->
-    <div
-      class="absolute inset-0"
-      style="background: linear-gradient(160deg, #0b1a0f 0%, #1f5c2e 45%, #2d713e 80%, #1f5c2e 100%);"
-    ></div>
-
-    <!-- Subtle radial glow using brand light green -->
-    <div
-      class="absolute inset-0 opacity-25"
-      style="background: radial-gradient(ellipse 65% 55% at 50% 50%, #4db848 0%, transparent 70%);"
-    ></div>
-
-    <!-- Fine cross-hatch texture for depth -->
-    <div
-      class="absolute inset-0 opacity-10"
-      style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.4%22 fill-rule=%22evenodd%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/svg%3E');"
-    ></div>
+    <img src="/sanctuary.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <!-- Vignette: lighter at center where text sits, darker at edges for cinematic depth -->
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 85% 75% at center, rgba(11, 26, 15, 0.40) 0%, rgba(11, 26, 15, 0.85) 100%);"></div>
+    <!-- Top fade for nav contrast -->
+    <div class="absolute inset-x-0 top-0 h-40" style="background: linear-gradient(to bottom, rgba(11, 26, 15, 0.75) 0%, transparent 100%);"></div>
 
     <div class="relative z-10 px-6 max-w-4xl mx-auto">
-      <p class="text-green-300 text-sm font-medium tracking-[0.3em] uppercase mb-6">
+      <p class="text-sm font-medium tracking-[0.3em] uppercase mb-6" style="color: #d4b46a;">
         Founded 1878 &nbsp;·&nbsp; Mount Olive, North Carolina
       </p>
       <h1 class="font-display text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
@@ -85,10 +60,10 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="#service-times"
-          class="px-8 py-4 text-white font-medium rounded transition-colors text-base"
-          style="background-color: #4db848;"
-          onmouseover="this.style.backgroundColor='#3e9a55'"
-          onmouseout="this.style.backgroundColor='#4db848'"
+          class="px-8 py-4 text-white font-medium rounded transition-all text-base shadow-lg"
+          style="background-color: #1f5c2e; border: 1px solid rgba(212, 180, 106, 0.4);"
+          onmouseover="this.style.backgroundColor='#2d713e'"
+          onmouseout="this.style.backgroundColor='#1f5c2e'"
         >
           Plan a Visit
         </a>
@@ -114,7 +89,7 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
   <!-- ── Welcome ──────────────────────────────────────────────────── -->
   <section id="welcome" class="py-24 px-6">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">Welcome Home</p>
+      <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #a88218;">Welcome Home</p>
       <h2 class="font-display text-green-950 text-4xl sm:text-5xl font-bold mb-8 leading-snug">
         Grace, Community,<br />and a Century of Song
       </h2>
@@ -131,16 +106,22 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
     </div>
   </section>
 
-  <!-- Divider -->
+  <!-- Divider with cross ornament -->
   <div class="max-w-6xl mx-auto px-6">
-    <div class="border-t border-green-200"></div>
+    <div class="flex items-center justify-center gap-5">
+      <div class="flex-1 max-w-[160px] border-t" style="border-color: rgba(197, 160, 40, 0.4);"></div>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 1.5v13M1.5 8h13" stroke="#c5a028" stroke-width="1.25" stroke-linecap="round"/>
+      </svg>
+      <div class="flex-1 max-w-[160px] border-t" style="border-color: rgba(197, 160, 40, 0.4);"></div>
+    </div>
   </div>
 
   <!-- ── Service Times ─────────────────────────────────────────────── -->
   <section id="service-times" class="py-24 px-6 bg-cream">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">Join Us</p>
+        <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #a88218;">Join Us</p>
         <h2 class="font-display text-green-950 text-4xl sm:text-5xl font-bold leading-snug">
           Sunday Worship
         </h2>
@@ -188,7 +169,7 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
   <section id="connect" class="py-24 px-6">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">Get Involved</p>
+        <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #a88218;">Get Involved</p>
         <h2 class="font-display text-green-950 text-4xl sm:text-5xl font-bold leading-snug">
           Grow With Us
         </h2>
@@ -251,7 +232,7 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
   <!-- ── Contact ──────────────────────────────────────────────────── -->
   <section id="contact" class="py-24 px-6 text-white" style="background-color: #1f5c2e;">
     <div class="max-w-4xl mx-auto text-center">
-      <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">We'd Love to Meet You</p>
+      <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #d4b46a;">We'd Love to Meet You</p>
       <h2 class="font-display text-white text-4xl sm:text-5xl font-bold mb-8 leading-snug">
         Come As You Are
       </h2>
