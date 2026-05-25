@@ -1,0 +1,310 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// TODO: Update these placeholders before launch
+const YOUTUBE_URL  = "https://www.youtube.com/@fbcmountolive";
+const GIVING_URL   = "https://give.example.com";
+const MAPS_URL     = "https://maps.google.com/?q=First+Baptist+Church+Mount+Olive+NC";
+const PHONE        = "tel:+19195550000";
+const EMAIL        = "mailto:office@fbcmountolive.org";
+const ADDRESS_LINE1 = "300 North Chestnut Street";        // TODO: confirm
+const ADDRESS_LINE2 = "Mount Olive, North Carolina 28365";       // TODO: confirm
+const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
+---
+
+<Layout>
+  <!-- ── Navigation ──────────────────────────────────────────────── -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3">
+        <!--
+          Drop your logo file at public/logo.png (or .svg) and uncomment:
+          <img src="/logo.png" alt="First Baptist Mount Olive" class="h-10 w-auto" />
+        -->
+        <div class="h-10 px-3 rounded bg-white/15 border border-white/30 flex items-center justify-center text-white font-display font-bold text-sm tracking-wider">
+          FIRST BAPTIST · MOUNT OLIVE
+        </div>
+      </a>
+      <ul class="flex items-center gap-6 text-sm font-medium text-white/90">
+        <li><a href="#welcome"      class="hover:text-white transition-colors hidden md:block">About</a></li>
+        <li><a href="#service-times" class="hover:text-white transition-colors hidden md:block">Worship</a></li>
+        <li><a href="#connect"      class="hover:text-white transition-colors hidden md:block">Connect</a></li>
+        <li>
+          <a href="#contact" class="px-4 py-2 border border-white/60 rounded text-white text-sm hover:bg-white/10 transition-colors">
+            Visit Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── Hero ────────────────────────────────────────────────────── -->
+  <section
+    id="hero"
+    class="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
+  >
+    <!--
+      Hero background: uncomment the <img> tag below and add your sanctuary photo
+      to public/images/sanctuary.jpg for a dramatic full-bleed background.
+      <img src="/images/sanctuary.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-green-950/70"></div>
+    -->
+
+    <!-- CSS gradient background (active until a real photo is added) -->
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(160deg, #0b1a0f 0%, #1f5c2e 45%, #2d713e 80%, #1f5c2e 100%);"
+    ></div>
+
+    <!-- Subtle radial glow using brand light green -->
+    <div
+      class="absolute inset-0 opacity-25"
+      style="background: radial-gradient(ellipse 65% 55% at 50% 50%, #4db848 0%, transparent 70%);"
+    ></div>
+
+    <!-- Fine cross-hatch texture for depth -->
+    <div
+      class="absolute inset-0 opacity-10"
+      style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.4%22 fill-rule=%22evenodd%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/svg%3E');"
+    ></div>
+
+    <div class="relative z-10 px-6 max-w-4xl mx-auto">
+      <p class="text-green-300 text-sm font-medium tracking-[0.3em] uppercase mb-6">
+        Founded 1878 &nbsp;·&nbsp; Mount Olive, North Carolina
+      </p>
+      <h1 class="font-display text-white text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+        First Baptist Church
+        <span class="block italic font-normal text-4xl sm:text-5xl lg:text-6xl mt-2" style="color: #4db848;">
+          of Mount Olive
+        </span>
+      </h1>
+      <p class="text-white/80 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed mb-10">
+        A welcoming family rooted in faith, gathering in a sanctuary that has
+        proclaimed the Gospel for over a century. You are warmly invited.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#service-times"
+          class="px-8 py-4 text-white font-medium rounded transition-colors text-base"
+          style="background-color: #4db848;"
+          onmouseover="this.style.backgroundColor='#3e9a55'"
+          onmouseout="this.style.backgroundColor='#4db848'"
+        >
+          Plan a Visit
+        </a>
+        <a
+          href={YOUTUBE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-8 py-4 border border-white/50 hover:bg-white/10 text-white font-medium rounded transition-colors text-base"
+        >
+          Watch Online
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ── Welcome ──────────────────────────────────────────────────── -->
+  <section id="welcome" class="py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">Welcome Home</p>
+      <h2 class="font-display text-green-950 text-4xl sm:text-5xl font-bold mb-8 leading-snug">
+        Grace, Community,<br />and a Century of Song
+      </h2>
+      <p class="text-green-900/70 text-lg leading-relaxed mb-6">
+        Nestled in the heart of Mount Olive, our congregation has gathered in this
+        historic sanctuary since 1878. The same pipe organ that has led generations
+        in worship still calls us together each Sunday morning.
+      </p>
+      <p class="text-green-900/70 text-lg leading-relaxed">
+        Whether you are a lifelong Baptist or simply curious, there is a place for
+        you here. We invite you to come as you are — and experience the warmth of a
+        community built on grace.
+      </p>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="border-t border-green-200"></div>
+  </div>
+
+  <!-- ── Service Times ─────────────────────────────────────────────── -->
+  <section id="service-times" class="py-24 px-6 bg-cream">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">Join Us</p>
+        <h2 class="font-display text-green-950 text-4xl sm:text-5xl font-bold leading-snug">
+          Sunday Worship
+        </h2>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+
+        <!-- Time card -->
+        <div class="flex-1 max-w-sm mx-auto sm:mx-0 text-center bg-white rounded-lg px-10 py-10 shadow-sm border border-green-100">
+          <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-700">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <p class="text-green-900/60 text-xs font-medium tracking-widest uppercase mb-2">Morning Worship</p>
+          <p class="font-display text-green-950 text-3xl font-bold">{SERVICE_TIME}</p>
+          <p class="text-green-900/50 text-sm mt-1">Sunday</p>
+        </div>
+
+        <!-- Location card -->
+        <div class="flex-1 max-w-sm mx-auto sm:mx-0 text-center rounded-lg px-10 py-10 shadow-sm text-white" style="background-color: #1f5c2e;">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: #4db848;">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <p class="text-xs font-medium tracking-widest uppercase mb-2" style="color: #78cc72;">Location</p>
+          <p class="font-display text-white text-xl font-semibold leading-snug">{ADDRESS_LINE1}</p>
+          <p class="text-sm mt-1" style="color: #78cc72;">{ADDRESS_LINE2}</p>
+          <a
+            href={MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-4 text-sm hover:text-white transition-colors underline underline-offset-2"
+            style="color: #4db848;"
+          >
+            Get Directions →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Connect ──────────────────────────────────────────────────── -->
+  <section id="connect" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">Get Involved</p>
+        <h2 class="font-display text-green-950 text-4xl sm:text-5xl font-bold leading-snug">
+          Grow With Us
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <!-- Sermons → YouTube -->
+        <a
+          href={YOUTUBE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative overflow-hidden rounded-xl p-10 flex flex-col justify-between min-h-64 transition-colors"
+          style="background-color: #0b1a0f;"
+          onmouseover="this.style.backgroundColor='#1f5c2e'"
+          onmouseout="this.style.backgroundColor='#0b1a0f'"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: #4db848;">
+                <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+              </svg>
+            </div>
+            <h3 class="font-display text-white text-2xl font-bold mb-3">Watch Sermons</h3>
+            <p class="text-white/60 text-sm leading-relaxed">
+              Catch up on recent messages or explore our sermon library on YouTube.
+            </p>
+          </div>
+          <span class="text-sm font-medium mt-8 transition-colors" style="color: #4db848;">
+            View on YouTube →
+          </span>
+        </a>
+
+        <!-- Give -->
+        <a
+          href={GIVING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative overflow-hidden rounded-xl bg-parchment border border-green-200 p-10 flex flex-col justify-between min-h-64 hover:border-green-400 transition-colors"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-6 group-hover:bg-green-200 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-700">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="font-display text-green-950 text-2xl font-bold mb-3">Give Online</h3>
+            <p class="text-green-900/60 text-sm leading-relaxed">
+              Support the ministry of First Baptist Church with a gift. Your generosity makes a difference.
+            </p>
+          </div>
+          <span class="text-green-700 text-sm font-medium mt-8 group-hover:text-green-600 transition-colors">
+            Give Now →
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ──────────────────────────────────────────────────── -->
+  <section id="contact" class="py-24 px-6 text-white" style="background-color: #1f5c2e;">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #4db848;">We'd Love to Meet You</p>
+      <h2 class="font-display text-white text-4xl sm:text-5xl font-bold mb-8 leading-snug">
+        Come As You Are
+      </h2>
+      <p class="text-white/70 text-lg leading-relaxed max-w-xl mx-auto mb-12">
+        Our doors are open every Sunday morning. If you have questions or would like
+        to know more before you visit, we'd love to hear from you.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+        <a
+          href={EMAIL}
+          class="px-8 py-4 text-white font-medium rounded transition-colors"
+          style="background-color: #4db848;"
+          onmouseover="this.style.backgroundColor='#3e9a55'"
+          onmouseout="this.style.backgroundColor='#4db848'"
+        >
+          Send Us a Message
+        </a>
+        <a
+          href={PHONE}
+          class="px-8 py-4 border border-white/30 hover:bg-white/10 text-white font-medium rounded transition-colors"
+        >
+          Call the Office
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────────── -->
+  <footer class="border-t border-white/10 py-8 px-6" style="background-color: #0b1a0f;">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-sm">
+      <p class="font-display italic">First Baptist Church of Mount Olive</p>
+      <p>© {new Date().getFullYear()} · All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Nav becomes opaque when hero scrolls out of view -->
+  <script>
+    const header = document.getElementById("site-header");
+    const hero   = document.getElementById("hero");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          header?.classList.remove("shadow-lg");
+          header?.style.setProperty("background-color", "transparent");
+        } else {
+          header?.classList.add("shadow-lg");
+          header?.style.setProperty("background-color", "#1f5c2e");
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (hero) observer.observe(hero);
+  </script>
+</Layout>

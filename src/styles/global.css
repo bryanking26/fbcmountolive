@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand greens — matched from the FBC Mount Olive logo */
+  --color-brand-light: #4db848;   /* kelly green: upper clover, "MOUNT OLIVE" text */
+  --color-brand-dark:  #1f5c2e;   /* forest green: lower clover, "FIRST BAPTIST" text */
+
+  --color-green-950: #0b1a0f;
+  --color-green-900: #1f5c2e;   /* = brand-dark */
+  --color-green-800: #265e34;
+  --color-green-700: #2d713e;
+  --color-green-600: #358449;
+  --color-green-500: #3e9a55;
+  --color-green-400: #4db848;   /* = brand-light */
+  --color-green-300: #78cc72;
+  --color-green-200: #a8e0a3;
+  --color-green-100: #d8f2d5;
+  --color-green-50:  #f0faf0;
+
+  --color-cream: #f8f5f0;
+  --color-parchment: #f0ebe2;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-cream);
+    color: var(--color-green-950);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
