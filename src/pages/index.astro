@@ -156,76 +156,148 @@ const SERVICE_TIME  = "10:45 AM";                    // TODO: confirm
     </div>
   </section>
 
-  <!-- Divider with cross ornament -->
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="flex items-center justify-center gap-5">
-      <div class="flex-1 max-w-[160px] border-t" style="border-color: rgba(197, 160, 40, 0.4);"></div>
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M8 1.5v13M1.5 8h13" stroke="#c5a028" stroke-width="1.25" stroke-linecap="round"/>
-      </svg>
-      <div class="flex-1 max-w-[160px] border-t" style="border-color: rgba(197, 160, 40, 0.4);"></div>
-    </div>
-  </div>
-
-  <!-- ── Meet Our Pastor ──────────────────────────────────────────── -->
+  <!-- ── Meet Our Pastor & Staff ──────────────────────────────────── -->
   <section id="pastor" class="py-24 px-6 bg-cream bg-paper">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-20">
 
-      <div class="text-center mb-12">
-        <!-- Gold ornament -->
-        <div class="fade-in flex items-center justify-center gap-4 mb-6">
-          <div class="w-8 border-t" style="border-color: rgba(197, 160, 40, 0.5);"></div>
-          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M8 1.5v13M1.5 8h13" stroke="#c5a028" stroke-width="1.25" stroke-linecap="round"/>
-          </svg>
-          <div class="w-8 border-t" style="border-color: rgba(197, 160, 40, 0.5);"></div>
+      <!-- LEFT COLUMN: Senior Pastor -->
+      <div>
+        <div class="text-center mb-10">
+          <!-- Gold ornament -->
+          <div class="fade-in flex items-center justify-center gap-4 mb-6">
+            <div class="w-8 border-t" style="border-color: rgba(197, 160, 40, 0.5);"></div>
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 1.5v13M1.5 8h13" stroke="#c5a028" stroke-width="1.25" stroke-linecap="round"/>
+            </svg>
+            <div class="w-8 border-t" style="border-color: rgba(197, 160, 40, 0.5);"></div>
+          </div>
+          <p class="fade-in text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #a88218;">Meet Our Pastor</p>
+          <h2 class="fade-in font-display text-green-950 text-3xl sm:text-4xl font-bold leading-snug">
+            Dr. Timothy Lipp
+          </h2>
+          <p class="fade-in font-display italic text-lg mt-3" style="color: #1f5c2e;">Senior Pastor</p>
         </div>
-        <p class="fade-in text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #a88218;">Meet Our Pastor</p>
-        <h2 class="fade-in font-display text-green-950 text-4xl sm:text-5xl font-bold leading-snug">
-          Dr. Timothy Lipp
-        </h2>
-        <p class="fade-in font-display italic text-xl mt-3" style="color: #1f5c2e;">Senior Pastor</p>
+
+        <img
+          src="/pastor.jpg"
+          alt="Dr. Timothy Lipp, Senior Pastor"
+          class="fade-in w-48 h-48 rounded-full object-cover mx-auto mb-10 shadow-xl ring-1 ring-green-200"
+        />
+
+        <div class="space-y-5 text-green-900/75 text-base leading-relaxed">
+          <p class="fade-in">
+            Dr. Lipp joined First Baptist Mount Olive as senior pastor in May 2026,
+            bringing more than 25 years of pastoral ministry to the congregation. A native
+            of the Raleigh area, he grew up at First Baptist Church, Cary, where his father
+            served on the pastoral staff.
+          </p>
+          <p class="fade-in">
+            He answered the call to vocational ministry during his years at the University
+            of North Carolina at Wilmington and went on to earn both his Master of Divinity
+            (2004) and Doctor of Ministry (2015) at Campbell Divinity School. Ordained at
+            First Baptist Church of Fayetteville, he has served churches across North
+            Carolina and Virginia — most recently Rosewood First Baptist in Goldsboro,
+            where he pastored from 2023 until his coming to Mount Olive.
+          </p>
+          <p class="fade-in">
+            Dr. Lipp and his wife Beth — a behavioral therapist who works with children on
+            the autism spectrum — have been married for 24 years. Their daughter Sophie
+            (b. 2009) plays soccer and cheers for Rosewood High School; their son Cohen
+            (b. 2018) loves Legos and is learning to play soccer. The family enjoys
+            summers at the Carolina coast and ski trips to the North Carolina mountains
+            in winter.
+          </p>
+
+          <!-- Closing invitation in italic -->
+          <p class="fade-in font-display italic text-center text-lg pt-4" style="color: #1f5c2e;">
+            "Come check us out on Sunday mornings, Wednesday evenings, and any of our
+            ministries for every age and stage of life."
+          </p>
+        </div>
       </div>
 
-      <img
-        src="/pastor.jpg"
-        alt="Dr. Timothy Lipp, Senior Pastor"
-        class="fade-in w-48 h-48 rounded-full object-cover mx-auto mb-12 shadow-xl ring-1 ring-green-200"
-      />
+      <!-- RIGHT COLUMN: Support Staff -->
+      <div>
+        <div class="text-center mb-10">
+          <!-- Gold ornament -->
+          <div class="fade-in flex items-center justify-center gap-4 mb-6">
+            <div class="w-8 border-t" style="border-color: rgba(197, 160, 40, 0.5);"></div>
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 1.5v13M1.5 8h13" stroke="#c5a028" stroke-width="1.25" stroke-linecap="round"/>
+            </svg>
+            <div class="w-8 border-t" style="border-color: rgba(197, 160, 40, 0.5);"></div>
+          </div>
+          <p class="fade-in text-sm font-medium tracking-[0.25em] uppercase mb-4" style="color: #a88218;">Ministry Team</p>
+          <h2 class="fade-in font-display text-green-950 text-3xl sm:text-4xl font-bold leading-snug">
+            Serving Side by Side
+          </h2>
+          <p class="fade-in font-display italic text-lg mt-3" style="color: #1f5c2e;">Support Staff</p>
+        </div>
 
-      <div class="space-y-6 text-green-900/75 text-lg leading-relaxed">
-        <p class="fade-in">
-          Dr. Lipp joined First Baptist Mount Olive as senior pastor in May 2026,
-          bringing more than 25 years of pastoral ministry to the congregation. A native
-          of the Raleigh area, he grew up at First Baptist Church, Cary, where his father
-          served on the pastoral staff.
-        </p>
-        <p class="fade-in">
-          He answered the call to vocational ministry during his years at the University
-          of North Carolina at Wilmington and went on to earn both his Master of Divinity
-          (2004) and Doctor of Ministry (2015) at Campbell Divinity School. Ordained at
-          First Baptist Church of Fayetteville, he has served churches across North
-          Carolina and Virginia — most recently Rosewood First Baptist in Goldsboro,
-          where he pastored from 2023 until his coming to Mount Olive.
-        </p>
-        <p class="fade-in">
-          Dr. Lipp and his wife Beth — a behavioral therapist who works with children on
-          the autism spectrum — have been married for 24 years. Their daughter Sophie
-          (b. 2009) plays soccer and cheers for Rosewood High School; their son Cohen
-          (b. 2018) loves Legos and is learning to play soccer. The family enjoys
-          summers at the Carolina coast and ski trips to the North Carolina mountains
-          in winter.
-        </p>
+        <!-- Staff cards -->
+        <div class="space-y-8">
 
-        <!-- Closing invitation in italic -->
-        <p class="fade-in font-display italic text-center text-xl pt-6" style="color: #1f5c2e;">
-          "Come check us out on Sunday mornings, Wednesday evenings, and any of the many
-          ministries that serve every age and stage of life at First Baptist Mount Olive."
-        </p>
+          <!-- Music Director -->
+          <div class="fade-in flex items-start gap-5 bg-white/60 rounded-lg p-6 border border-green-100 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+            <img
+              src="/musicdirector.jpg"
+              alt="Janet Rose, Music Director"
+              class="shrink-0 w-30 h-30 rounded-full object-cover ring-1 ring-green-200"
+            />
+            <div class="flex-1 pt-1">
+              <p class="text-xs font-medium tracking-[0.2em] uppercase mb-1" style="color: #a88218;">Music Director</p>
+              <h3 class="font-display text-green-950 text-xl font-bold mb-2">Janet Rose</h3>
+              <p class="text-green-900/70 text-sm leading-relaxed">
+                Leads our traditional worship through the historic pipe organ, choir, and
+                congregational hymn singing. Coordinates seasonal music programs and special
+                services throughout the year.
+              </p>
+            </div>
+          </div>
+
+          <!-- Youth Director -->
+          <div class="fade-in fade-delay-1 flex items-start gap-5 bg-white/60 rounded-lg p-6 border border-green-100 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+            <img
+              src="/youthdirector.jpg"
+              alt="Beth Rose, Youth Director"
+              class="shrink-0 w-30 h-30 rounded-full object-cover ring-1 ring-green-200"
+            />
+            <div class="flex-1 pt-1">
+              <p class="text-xs font-medium tracking-[0.2em] uppercase mb-1" style="color: #a88218;">Youth Director</p>
+              <h3 class="font-display text-green-950 text-xl font-bold mb-2">Beth Rose</h3>
+              <p class="text-green-900/70 text-sm leading-relaxed">
+                A native of Mount Olive and lifelong member of First Baptist, Beth teaches
+                7th grade English Language Arts at Mount Olive Middle School — where she was
+                named the NC Center for the Advancement of Teaching's Beginning Teacher of
+                the Year in 2023. She brings that same passion for guiding young people to
+                her ministry with our youth.
+              </p>
+            </div>
+          </div>
+
+          <!-- Closing line to balance the column visually -->
+          <p class="fade-in fade-delay-2 font-display italic text-center text-lg pt-4 px-4" style="color: #1f5c2e;">
+            "Together with our pastor, our staff is here to walk with you in every season of life."
+          </p>
+
+        </div>
       </div>
 
     </div>
   </section>
+
+  <!-- Divider with cross ornament — separates About (pastor/staff) from Worship -->
+  <div class="bg-cream bg-paper">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-center gap-5">
+        <div class="flex-1 max-w-[160px] border-t" style="border-color: rgba(197, 160, 40, 0.4);"></div>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 1.5v13M1.5 8h13" stroke="#c5a028" stroke-width="1.25" stroke-linecap="round"/>
+        </svg>
+        <div class="flex-1 max-w-[160px] border-t" style="border-color: rgba(197, 160, 40, 0.4);"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── Service Times ─────────────────────────────────────────────── -->
   <section id="service-times" class="py-24 px-6 bg-cream bg-paper">
